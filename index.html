@@ -1,143 +1,361 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Intel: Sustainability Through the Ages</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Marks JS as available so scroll-reveal never hides content without it -->
+  <script>document.documentElement.classList.add("js");</script>
+
+  <link href="style.css" rel="stylesheet" />
 </head>
 <body>
-  
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to main content</a>
+
   <!-- Header / Hero Section -->
   <header>
-    <div>
-      <!-- Ask Copilot to teach you about `.svg`. 🙂 You'll need to resize the logo with CSS. -->
-      <img src="img/intel-header-logo.svg" alt="Intel Logo" />
-      <!-- Main Heading -->
-      <h1>
-        Sustainability Through the Ages
-      </h1>
-
-      <!-- Subheading / Description -->
-      <p>
-        Explore Intel's journey through time, discovering how our commitment
-        to innovation has shaped a more sustainable future for technology 
-        and our planet.
-      </p>
+    <div class="topbar py-3">
+      <div class="container d-flex align-items-center justify-content-between gap-3">
+        <img class="logo" src="img/intel-header-logo.svg" alt="Intel logo" data-i18n-alt="logo_alt" />
+        <nav aria-label="Primary" data-i18n-aria="nav_label">
+          <ul class="nav">
+            <li class="nav-item"><a class="nav-link" href="#silicon" data-i18n="nav_silicon">Silicon Era</a></li>
+            <li class="nav-item"><a class="nav-link" href="#sustain" data-i18n="nav_sustain">Sustainability Era</a></li>
+            <li class="nav-item"><a class="nav-link" href="#feedback" data-i18n="nav_feedback">Feedback</a></li>
+          </ul>
+        </nav>
+        <div class="lang-toggle btn-group" role="group" aria-label="Language" data-i18n-aria="lang_label">
+          <button type="button" class="btn btn-outline-light" data-lang="en" lang="en" aria-pressed="true">EN</button>
+          <button type="button" class="btn btn-outline-light" data-lang="es" lang="es" aria-pressed="false">ES</button>
+        </div>
+      </div>
+    </div>
+    <div class="hero">
+      <div class="container">
+        <span class="kicker">1968 → 2024</span>
+        <h1 data-i18n="h1">Sustainability Through the Ages</h1>
+        <p class="mt-3" data-i18n="intro">
+          Explore Intel's journey through time, discovering how our commitment to innovation has shaped a more sustainable future for technology and our planet.
+        </p>
+      </div>
     </div>
   </header>
 
-  <!-- Timeline Cards Section -->
-  <section>
+  <main id="main">
+    <!-- Timeline: 1 column on phones, 2 on tablets, 3 on desktop -->
+    <section class="pb-5" aria-labelledby="timeline-title">
+      <div class="container">
+        <h2 id="timeline-title" class="section-title mb-4" data-i18n="timeline_title">Timeline</h2>
+        <ol class="timeline row g-4">
 
-    <!-- Card 1: 1968 -->
-    <div>
-      <h2>1968</h2>
-      <h3>Intel Founded</h3>
-     <img src="img/1.jpg" alt="Robert Noyce and Gordon Moore, Intel's founders" />
-      <p>
-        Robert Noyce and Gordon Moore rename the newly formed company 
-        NM Electronics to Intel Corporation, laying the foundation for 
-        decades of technological innovation.
-      </p>
-    </div>
+          <li class="col-12 col-md-6 col-lg-4">
+            <article class="card-item">
+              <img src="img/1.jpg" alt="Robert Noyce and Gordon Moore, Intel's founders" data-i18n-alt="c1_a" loading="lazy" />
+              <div class="card-body-x">
+                <div class="card-head">
+                  <span class="icon" aria-hidden="true"><i class="bi bi-building"></i></span>
+                  <div><span class="year">1968</span><h3 data-i18n="c1_t">Intel Founded</h3></div>
+                </div>
+                <p data-i18n="c1_p">Robert Noyce and Gordon Moore rename the newly formed company NM Electronics to Intel Corporation, laying the foundation for decades of technological innovation.</p>
+              </div>
+            </article>
+          </li>
 
-    <!-- Card 2: 1971 -->
-    <div>
-      <h2>1971</h2>
-      <h3>First Microprocessor</h3>
-      <img src="img/2.jpg" alt="Intel 4004 microprocessor" />
-      <p>
-        Intel debuts the 4004, the world's first commercial microprocessor, 
-        igniting the microprocessor revolution and propelling the future 
-        of computing devices.
-      </p>
-    </div>
+          <li class="col-12 col-md-6 col-lg-4">
+            <article class="card-item">
+              <img src="img/2.jpg" alt="Intel 4004 microprocessor" data-i18n-alt="c2_a" loading="lazy" />
+              <div class="card-body-x">
+                <div class="card-head">
+                  <span class="icon" aria-hidden="true"><i class="bi bi-cpu"></i></span>
+                  <div><span class="year">1971</span><h3 data-i18n="c2_t">First Microprocessor</h3></div>
+                </div>
+                <p data-i18n="c2_p">Intel debuts the 4004, the world's first commercial microprocessor, igniting the microprocessor revolution and propelling the future of computing devices.</p>
+              </div>
+            </article>
+          </li>
 
-    <!-- Card 3: 1978 -->
-    <div>
-      <h2>1978</h2>
-      <h3>8086 Processor</h3>
-      <img src="img/3.jpg" alt="Intel 8086 processor" />
-      <p>
-        Launch of the 8086 processor, establishing the x86 architecture 
-        that drives countless PCs and servers in the modern era.
-      </p>
-    </div>
+          <li class="col-12 col-md-6 col-lg-4">
+            <article class="card-item">
+              <img src="img/3.jpg" alt="Intel 8086 processor" data-i18n-alt="c3_a" loading="lazy" />
+              <div class="card-body-x">
+                <div class="card-head">
+                  <span class="icon" aria-hidden="true"><i class="bi bi-motherboard"></i></span>
+                  <div><span class="year">1978</span><h3 data-i18n="c3_t">8086 Processor</h3></div>
+                </div>
+                <p data-i18n="c3_p">Launch of the 8086 processor, establishing the x86 architecture that drives countless PCs and servers in the modern era.</p>
+              </div>
+            </article>
+          </li>
 
-    <!-- Card 4: 1985 -->
-    <div>
-      <h2>1985</h2>
-      <h3>386 Processor</h3>
-     <img src="img/4.jpg" alt="Intel 386 processor" />
-      <p>
-        Intel introduces the 386 processor with 32-bit architecture, 
-        ushering in a new era of performance and multitasking for 
-        personal computers.
-      </p>
-    </div>
+          <li class="col-12 col-md-6 col-lg-4">
+            <article class="card-item">
+              <img src="img/4.jpg" alt="Intel 386 processor" data-i18n-alt="c4_a" loading="lazy" />
+              <div class="card-body-x">
+                <div class="card-head">
+                  <span class="icon" aria-hidden="true"><i class="bi bi-pc-display"></i></span>
+                  <div><span class="year">1985</span><h3 data-i18n="c4_t">386 Processor</h3></div>
+                </div>
+                <p data-i18n="c4_p">Intel introduces the 386 processor with 32-bit architecture, ushering in a new era of performance and multitasking for personal computers.</p>
+              </div>
+            </article>
+          </li>
 
-    <!-- Card 5: 2006 -->
-    <div>
-      <h2>2006</h2>
-      <h3>Peak GHG Emissions</h3>
-      <img src="img/2006.jpg" alt="Peak GHG Emissions" />
-      <p>
-        This year marks Intel's highest annual greenhouse gas emissions 
-        for operations. Over subsequent years, Intel invests heavily in 
-        chemical abatement, renewable energy, and energy-efficient 
-        manufacturing to reverse this trend.
-      </p>
-    </div>
+          <li class="col-12 col-md-6 col-lg-4">
+            <article class="card-item milestone">
+              <img src="img/2006.jpg" alt="Peak GHG Emissions" data-i18n-alt="c5_a" loading="lazy" />
+              <div class="card-body-x">
+                <div class="card-head">
+                  <span class="icon" aria-hidden="true"><i class="bi bi-cloud-haze2"></i></span>
+                  <div><span class="year">2006</span><h3 data-i18n="c5_t">Peak GHG Emissions</h3></div>
+                </div>
+                <p data-i18n="c5_p">This year marks Intel's highest annual greenhouse gas emissions for operations. Over subsequent years, Intel invests heavily in chemical abatement, renewable energy, and energy-efficient manufacturing to reverse this trend.</p>
+              </div>
+            </article>
+          </li>
 
-    <!-- Card 6: 2020 -->
-    <div>
-      <h2>2020</h2>
-      <h3>RISE Strategy</h3>
-      <img src="img/2020.jpg" alt="RISE Strategy" />
-      <p>
-        Intel launches its RISE (Responsible, Inclusive, Sustainable, 
-        Enabling) strategy and 2030 goals, aiming to drive industry-wide 
-        progress on climate action, water stewardship, and waste reduction.
-      </p>
-    </div>
+          <li class="col-12 col-md-6 col-lg-4">
+            <article class="card-item milestone">
+              <img src="img/2020.jpg" alt="RISE Strategy" data-i18n-alt="c6_a" loading="lazy" />
+              <div class="card-body-x">
+                <div class="card-head">
+                  <span class="icon" aria-hidden="true"><i class="bi bi-recycle"></i></span>
+                  <div><span class="year">2020</span><h3 data-i18n="c6_t">RISE Strategy</h3></div>
+                </div>
+                <p data-i18n="c6_p">Intel launches its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy and 2030 goals, aiming to drive industry-wide progress on climate action, water stewardship, and waste reduction.</p>
+              </div>
+            </article>
+          </li>
 
-    <!-- Card 7: 2022 -->
-    <div>
-      <h2>2022</h2>
-      <h3>Net-Zero By 2040</h3>
-      <img src="img/2022.jpg" alt="Net-Zero By 2040" />
-      <p>
-        Intel announces its commitment to achieve net-zero greenhouse 
-        gas emissions (Scope 1 and 2) across its global operations 
-        by 2040, building on years of environmental initiatives.
-      </p>
-    </div>
+          <li class="col-12 col-md-6 col-lg-4">
+            <article class="card-item milestone">
+              <img src="img/2022.jpg" alt="Net-Zero By 2040" data-i18n-alt="c7_a" loading="lazy" />
+              <div class="card-body-x">
+                <div class="card-head">
+                  <span class="icon" aria-hidden="true"><i class="bi bi-bullseye"></i></span>
+                  <div><span class="year">2022</span><h3 data-i18n="c7_t">Net-Zero By 2040</h3></div>
+                </div>
+                <p data-i18n="c7_p">Intel announces its commitment to achieve net-zero greenhouse gas emissions (Scope 1 and 2) across its global operations by 2040, building on years of environmental initiatives.</p>
+              </div>
+            </article>
+          </li>
 
-    <!-- Card 8: 2023 -->
-    <div>
-      <h2>2023</h2>
-      <h3>Renewable Electricity</h3>
-      <img src="img/2023.jpg" alt="Renewable Electricity" />
-      <p>
-        The company achieves 99% renewable electricity usage worldwide, 
-        helping to drastically lower carbon emissions and driving progress 
-        toward Intel's long-term sustainability goals.
-      </p>
-    </div>
+          <li class="col-12 col-md-6 col-lg-4">
+            <article class="card-item milestone">
+              <img src="img/2023.jpg" alt="Renewable Electricity" data-i18n-alt="c8_a" loading="lazy" />
+              <div class="card-body-x">
+                <div class="card-head">
+                  <span class="icon" aria-hidden="true"><i class="bi bi-lightning-charge"></i></span>
+                  <div><span class="year">2023</span><h3 data-i18n="c8_t">Renewable Electricity</h3></div>
+                </div>
+                <p data-i18n="c8_p">The company achieves 99% renewable electricity usage worldwide, helping to drastically lower carbon emissions and driving progress toward Intel's long-term sustainability goals.</p>
+              </div>
+            </article>
+          </li>
 
-    <!-- Card 9: 2024 -->
-    <div>
-      <h2>2024</h2>
-      <h3>Sustainability Summit</h3>
-      <img src="img/summit.jpg" alt="Sustainability Summit" />
-      <p>
-        Intel hosts its first Sustainability Summit, uniting suppliers, 
-        government officials, and industry leaders to collaborate on 
-        next-generation sustainable semiconductor manufacturing.
-      </p>
-    </div>
-  </section>
-  <p>Scroll to view timeline | Hover over cards to learn more!</p>
+          <li class="col-12 col-md-6 col-lg-4">
+            <article class="card-item milestone">
+              <img src="img/summit.jpg" alt="Sustainability Summit" data-i18n-alt="c9_a" loading="lazy" />
+              <div class="card-body-x">
+                <div class="card-head">
+                  <span class="icon" aria-hidden="true"><i class="bi bi-people"></i></span>
+                  <div><span class="year">2024</span><h3 data-i18n="c9_t">Sustainability Summit</h3></div>
+                </div>
+                <p data-i18n="c9_p">Intel hosts its first Sustainability Summit, uniting suppliers, government officials, and industry leaders to collaborate on next-generation sustainable semiconductor manufacturing.</p>
+              </div>
+            </article>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Accessible form -->
+    <section class="pb-5" id="feedback" aria-labelledby="form-title">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-8 col-xl-6">
+            <h2 id="form-title" class="section-title" data-i18n="form_title">Share your feedback</h2>
+            <p><span data-i18n="form_intro">Fields marked with an asterisk are required.</span> <span class="req" aria-hidden="true">*</span></p>
+
+            <div class="form-panel">
+              <form id="feedback-form" novalidate>
+                <div class="mb-3">
+                  <label for="name" class="form-label"><span data-i18n="l_name">Full name</span> <span class="req" aria-hidden="true">*</span></label>
+                  <input type="text" class="form-control" id="name" name="name" autocomplete="name" required aria-describedby="name-error" />
+                  <div class="field-error" id="name-error" data-error-for="name"></div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="email" class="form-label"><span data-i18n="l_email">Email address</span> <span class="req" aria-hidden="true">*</span></label>
+                  <input type="email" class="form-control" id="email" name="email" autocomplete="email" required aria-describedby="email-hint email-error" />
+                  <div class="form-text" id="email-hint" data-i18n="h_email">We only use this to reply to you.</div>
+                  <div class="field-error" id="email-error" data-error-for="email"></div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="milestone" class="form-label"><span data-i18n="l_milestone">Which milestone is your feedback about?</span> <span class="req" aria-hidden="true">*</span></label>
+                  <select class="form-select" id="milestone" name="milestone" required aria-describedby="milestone-error">
+                    <option value="" data-i18n="o_choose">Choose a milestone</option>
+                    <option value="1968">1968</option><option value="1971">1971</option><option value="1978">1978</option>
+                    <option value="1985">1985</option><option value="2006">2006</option><option value="2020">2020</option>
+                    <option value="2022">2022</option><option value="2023">2023</option><option value="2024">2024</option>
+                    <option value="general" data-i18n="o_general">General</option>
+                  </select>
+                  <div class="field-error" id="milestone-error" data-error-for="milestone"></div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="message" class="form-label"><span data-i18n="l_message">Your feedback</span> <span class="req" aria-hidden="true">*</span></label>
+                  <textarea class="form-control" id="message" name="message" rows="5" required aria-describedby="message-error"></textarea>
+                  <div class="field-error" id="message-error" data-error-for="message"></div>
+                </div>
+
+                <button type="submit" class="btn btn-intel" data-i18n="submit">Send feedback</button>
+              </form>
+              <div id="form-status" class="mt-3 fw-bold" role="status" aria-live="polite" tabindex="-1"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-4">
+    <div class="container"><small data-i18n="footer">Scroll to view the timeline.</small></div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const S = {
+      en: {
+        skip: "Skip to main content", lang_label: "Language", logo_alt: "Intel logo",
+        h1: "Sustainability Through the Ages",
+        intro: "Explore Intel's journey through time, discovering how our commitment to innovation has shaped a more sustainable future for technology and our planet.",
+        timeline_title: "Timeline",
+        c1_t: "Intel Founded", c1_a: "Robert Noyce and Gordon Moore, Intel's founders",
+        c1_p: "Robert Noyce and Gordon Moore rename the newly formed company NM Electronics to Intel Corporation, laying the foundation for decades of technological innovation.",
+        c2_t: "First Microprocessor", c2_a: "Intel 4004 microprocessor",
+        c2_p: "Intel debuts the 4004, the world's first commercial microprocessor, igniting the microprocessor revolution and propelling the future of computing devices.",
+        c3_t: "8086 Processor", c3_a: "Intel 8086 processor",
+        c3_p: "Launch of the 8086 processor, establishing the x86 architecture that drives countless PCs and servers in the modern era.",
+        c4_t: "386 Processor", c4_a: "Intel 386 processor",
+        c4_p: "Intel introduces the 386 processor with 32-bit architecture, ushering in a new era of performance and multitasking for personal computers.",
+        c5_t: "Peak GHG Emissions", c5_a: "Peak GHG Emissions",
+        c5_p: "This year marks Intel's highest annual greenhouse gas emissions for operations. Over subsequent years, Intel invests heavily in chemical abatement, renewable energy, and energy-efficient manufacturing to reverse this trend.",
+        c6_t: "RISE Strategy", c6_a: "RISE Strategy",
+        c6_p: "Intel launches its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy and 2030 goals, aiming to drive industry-wide progress on climate action, water stewardship, and waste reduction.",
+        c7_t: "Net-Zero By 2040", c7_a: "Net-Zero By 2040",
+        c7_p: "Intel announces its commitment to achieve net-zero greenhouse gas emissions (Scope 1 and 2) across its global operations by 2040, building on years of environmental initiatives.",
+        c8_t: "Renewable Electricity", c8_a: "Renewable Electricity",
+        c8_p: "The company achieves 99% renewable electricity usage worldwide, helping to drastically lower carbon emissions and driving progress toward Intel's long-term sustainability goals.",
+        c9_t: "Sustainability Summit", c9_a: "Sustainability Summit",
+        c9_p: "Intel hosts its first Sustainability Summit, uniting suppliers, government officials, and industry leaders to collaborate on next-generation sustainable semiconductor manufacturing.",
+        form_title: "Share your feedback", form_intro: "Fields marked with an asterisk are required.",
+        l_name: "Full name", l_email: "Email address", h_email: "We only use this to reply to you.",
+        l_milestone: "Which milestone is your feedback about?", o_choose: "Choose a milestone", o_general: "General",
+        l_message: "Your feedback", submit: "Send feedback", footer: "Scroll to view the timeline.",
+        e_name: "Enter your full name.", e_email_empty: "Enter your email address.",
+        e_email_bad: "Enter an email address like name@example.com.",
+        e_milestone: "Choose a milestone.", e_message: "Enter your feedback.",
+        summary: n => n === 1 ? "1 field needs your attention." : n + " fields need your attention.",
+        success: "Feedback sent. Thank you."
+      },
+      es: {
+        skip: "Saltar al contenido principal", lang_label: "Idioma", logo_alt: "Logotipo de Intel",
+        h1: "La sostenibilidad a través de las épocas",
+        intro: "Recorre la trayectoria de Intel y descubre cómo nuestro compromiso con la innovación ha dado forma a un futuro más sostenible para la tecnología y nuestro planeta.",
+        timeline_title: "Cronología",
+        c1_t: "Fundación de Intel", c1_a: "Robert Noyce y Gordon Moore, fundadores de Intel",
+        c1_p: "Robert Noyce y Gordon Moore cambian el nombre de la recién creada NM Electronics a Intel Corporation, sentando las bases de décadas de innovación tecnológica.",
+        c2_t: "Primer microprocesador", c2_a: "Microprocesador Intel 4004",
+        c2_p: "Intel presenta el 4004, el primer microprocesador comercial del mundo, que impulsa la revolución de los microprocesadores y el futuro de los dispositivos informáticos.",
+        c3_t: "Procesador 8086", c3_a: "Procesador Intel 8086",
+        c3_p: "Lanzamiento del procesador 8086, que establece la arquitectura x86 en la que se basan innumerables PC y servidores actuales.",
+        c4_t: "Procesador 386", c4_a: "Procesador Intel 386",
+        c4_p: "Intel presenta el procesador 386 con arquitectura de 32 bits, iniciando una nueva era de rendimiento y multitarea para los ordenadores personales.",
+        c5_t: "Máximo de emisiones de GEI", c5_a: "Máximo de emisiones de gases de efecto invernadero",
+        c5_p: "Este año registra las mayores emisiones anuales de gases de efecto invernadero de las operaciones de Intel. En los años siguientes, Intel invierte con fuerza en la reducción de químicos, la energía renovable y la fabricación eficiente para revertir esta tendencia.",
+        c6_t: "Estrategia RISE", c6_a: "Estrategia RISE",
+        c6_p: "Intel lanza su estrategia RISE (Responsable, Inclusiva, Sostenible y Facilitadora) y sus objetivos para 2030, con el fin de impulsar el avance de toda la industria en acción climática, gestión del agua y reducción de residuos.",
+        c7_t: "Cero emisiones netas para 2040", c7_a: "Cero emisiones netas para 2040",
+        c7_p: "Intel anuncia su compromiso de alcanzar cero emisiones netas de gases de efecto invernadero (alcances 1 y 2) en todas sus operaciones globales para 2040, a partir de años de iniciativas ambientales.",
+        c8_t: "Electricidad renovable", c8_a: "Electricidad renovable",
+        c8_p: "La empresa alcanza un 99 % de uso de electricidad renovable en todo el mundo, lo que reduce drásticamente las emisiones de carbono y avanza hacia sus objetivos de sostenibilidad a largo plazo.",
+        c9_t: "Cumbre de Sostenibilidad", c9_a: "Cumbre de Sostenibilidad",
+        c9_p: "Intel celebra su primera Cumbre de Sostenibilidad, que reúne a proveedores, autoridades gubernamentales y líderes del sector para colaborar en la fabricación sostenible de semiconductores de próxima generación.",
+        form_title: "Comparte tus comentarios", form_intro: "Los campos marcados con un asterisco son obligatorios.",
+        l_name: "Nombre completo", l_email: "Correo electrónico", h_email: "Solo lo usamos para responderte.",
+        l_milestone: "¿Sobre qué hito son tus comentarios?", o_choose: "Elige un hito", o_general: "General",
+        l_message: "Tus comentarios", submit: "Enviar comentarios", footer: "Desplázate para ver la cronología.",
+        e_name: "Escribe tu nombre completo.", e_email_empty: "Escribe tu correo electrónico.",
+        e_email_bad: "Escribe un correo como nombre@ejemplo.com.",
+        e_milestone: "Elige un hito.", e_message: "Escribe tus comentarios.",
+        summary: n => n === 1 ? "1 campo necesita tu atención." : n + " campos necesitan tu atención.",
+        success: "Comentarios enviados. Gracias."
+      }
+    };
+
+    const form = document.getElementById("feedback-form");
+    const status = document.getElementById("form-status");
+    let lang = "en";
+    try {
+      const saved = localStorage.getItem("lang");
+      if (saved && S[saved]) lang = saved;
+      else if ((navigator.language || "").toLowerCase().startsWith("es")) lang = "es";
+    } catch (e) {
+      if ((navigator.language || "").toLowerCase().startsWith("es")) lang = "es";
+    }
+
+    function applyLanguage(next) {
+      lang = next;
+      const t = S[lang];
+      document.documentElement.lang = lang;
+      document.querySelectorAll("[data-i18n]").forEach(el => el.textContent = t[el.dataset.i18n]);
+      document.querySelectorAll("[data-i18n-alt]").forEach(el => el.setAttribute("alt", t[el.dataset.i18nAlt]));
+      document.querySelectorAll("[data-i18n-aria]").forEach(el => el.setAttribute("aria-label", t[el.dataset.i18nAria]));
+      document.querySelectorAll("[data-lang]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
+      document.title = lang === "es" ? "Intel: La sostenibilidad a través de las épocas" : "Intel: Sustainability Through the Ages";
+      form.querySelectorAll(".is-invalid").forEach(validate);
+      try { localStorage.setItem("lang", lang); } catch (e) {}
+    }
+
+    function errKey(f) {
+      if (f.id === "name") return f.value.trim() ? null : "e_name";
+      if (f.id === "email") {
+        if (!f.value.trim()) return "e_email_empty";
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.value) ? null : "e_email_bad";
+      }
+      if (f.id === "milestone") return f.value ? null : "e_milestone";
+      if (f.id === "message") return f.value.trim() ? null : "e_message";
+      return null;
+    }
+    function validate(f) {
+      const k = errKey(f), box = form.querySelector('[data-error-for="' + f.id + '"]');
+      if (k) { f.classList.add("is-invalid"); f.setAttribute("aria-invalid", "true"); box.textContent = S[lang][k]; }
+      else { f.classList.remove("is-invalid"); f.removeAttribute("aria-invalid"); box.textContent = ""; }
+      return !k;
+    }
+    const fields = [...form.querySelectorAll("#name, #email, #milestone, #message")];
+    fields.forEach(f => {
+      f.addEventListener("blur", () => validate(f));
+      f.addEventListener("input", () => { if (f.classList.contains("is-invalid")) validate(f); });
+    });
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+      status.textContent = "";
+      const bad = fields.filter(f => !validate(f));
+      if (bad.length) { status.textContent = S[lang].summary(bad.length); bad[0].focus(); return; }
+      // TODO: send with fetch() to your backend
+      form.reset();
+      status.textContent = S[lang].success;
+      status.focus();
+    });
+    document.querySelectorAll("[data-lang]").forEach(b => b.addEventListener("click", () => applyLanguage(b.dataset.lang)));
+    applyLanguage(lang);
+  </script>
 </body>
 </html>
